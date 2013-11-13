@@ -1,0 +1,99 @@
+3 success(es) 0 failure(s) 0 error(s) 3 test(s) run
+0
+> (time (apply-moves (list 20 2) (path (list 20 2) (list 3 3)
+                                         (list 
+                                          (list 2 3)
+                                          (list 3 4)
+                                          (list 4 3)
+                                          (list 3 2)))))
+cpu time: 47 real time: 39 gc time: 0
+false
+> (time (apply-moves (list 20 2) (path (list 20 2) (list 3 3)
+                                         (list 
+                                          ;(list 2 3)
+                                          (list 3 4)
+                                          (list 4 3)
+                                          (list 3 2)))))
+cpu time: 16 real time: 18 gc time: 0
+(list 3 3)
+> (time (apply-moves (list 20 2) (path (list 20 2) (list 3 3)
+                                         (list 
+                                          (list 2 3)
+                                          ;(list 3 4)
+                                          (list 4 3)
+                                          (list 3 2)))))
+cpu time: 15 real time: 12 gc time: 0
+(list 3 3)
+> (time (apply-moves (list 20 2) (path (list 20 2) (list 3 3)
+                                         (list 
+                                          (list 2 3)
+                                          (list 3 4)
+                                          ;(list 4 3)
+                                          (list 3 2)))))
+cpu time: 15 real time: 17 gc time: 0
+(list 3 3)
+> (time (apply-moves (list 20 2) (path (list 20 2) (list 3 3)
+                                         (list 
+                                          (list 2 3)
+                                          (list 3 4)
+                                          (list 4 3)
+                                          #;(list 3 2)))))
+cpu time: 16 real time: 22 gc time: 0
+(list 3 3)
+> (time (apply-moves (list 100 50) (path (list 100 50) (list 3 3)
+                                         (list 
+                                          (list 2 3)
+                                          (list 3 4)
+                                          (list 4 3)
+                                          (list 3 2)))))
+cpu time: 32984 real time: 33051 gc time: 79
+false
+> (time (apply-moves (list 100 50) (path (list 100 50) (list 3 3)
+                                         (list 
+                                          ;(list 2 3)
+                                          (list 3 4)
+                                          (list 4 3)
+                                          (list 3 2)))))
+cpu time: 563 real time: 561 gc time: 31
+(list 3 3)
+> (time (apply-moves (list 100 50) (path (list 100 50) (list 3 3)
+                                         (list 
+                                          (list 2 3)
+                                          ;(list 3 4)
+                                          (list 4 3)
+                                          (list 3 2)))))
+cpu time: 375 real time: 377 gc time: 0
+(list 3 3)
+> (time (apply-moves (list 100 50) (path (list 100 50) (list 3 3)
+                                         (list 
+                                          (list 2 3)
+                                          (list 3 4)
+                                          ;(list 4 3)
+                                          (list 3 2)))))
+cpu time: 531 real time: 532 gc time: 0
+(list 3 3)
+> (time (apply-moves (list 100 50) (path (list 100 50) (list 3 3)
+                                         (list 
+                                          (list 2 3)
+                                          (list 3 4)
+                                          (list 4 3)
+                                          #;(list 3 2)))))
+cpu time: 641 real time: 629 gc time: 16
+(list 3 3)
+> (time (path (list 1 100) (list 3 3)
+                                         (list 
+                                          (list 2 1)
+                                          (list 2 2)
+                                          (list 2 3)
+                                          (list 3 4)
+                                          (list 4 3)
+                                          #;(list 3 2))))
+cpu time: 79 real time: 85 gc time: 0
+(list
+ (list "north" 95)
+ (list "east" 3)
+ (list "north" 1)
+ (list "east" 1)
+ (list "north" 3)
+ (list "west" 2)
+ (list "south" 2))
